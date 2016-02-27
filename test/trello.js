@@ -137,7 +137,7 @@ describe("Trello", function () {
       behavesLike.aRequest();
 
       it("should not require json arguments", function () {
-        this.trello.post("/test", function () {});
+        this.trello.put("/test", function () {});
         this.request.options.json.should.be.ok;
       });
 
