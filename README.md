@@ -20,6 +20,7 @@ npm install node-trello
 [devkey]: https://trello.com/1/appKey/generate
 
 ## Example Code
+### Fetching card data
 ```javascript
 var Trello = require("node-trello");
 var t = new Trello("<your key>", "<token>");
@@ -34,6 +35,22 @@ t.get("/1/members/me", { cards: "open" }, function(err, data) {
   if (err) throw err;
   console.log(data);
 });
+```
+
+### Uploading attachments to a card
+```javascript
+var fs = require("fs");
+var path = require("path");
+var Trello = require("node-trello");
+var t = new Trello("<your key>", "<token>");
+
+var cardId = "<the card id>";
+var pathToFile = path.resolve(__dirname, "/path/to/file.doc");
+
+t.post("/1/cards/" + cardId + "/attachments", { attachment: fs.createReadStream(pathToFile) }, function (err, attachments) {
+  if (err) throw err;
+  console.log(attachments);
+})
 ```
 
 ## License
