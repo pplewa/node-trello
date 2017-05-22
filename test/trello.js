@@ -1,3 +1,4 @@
+var events = require("events");
 var request = require("request");
 var mocha = require("mocha");
 var should = require("should");
@@ -29,27 +30,27 @@ describe("Trello", function () {
     beforeEach(function () {
       request.get = function (options) {
         this.request = { options: options };
-        return new process.EventEmitter();
+        return new events.EventEmitter();
       }.bind(this);
 
       request.post = function (options) {
         this.request = { options: options };
-        return new process.EventEmitter();
+        return new events.EventEmitter();
       }.bind(this);
 
       request.put = function (options) {
         this.request = { options: options };
-        return new process.EventEmitter();
+        return new events.EventEmitter();
       }.bind(this);
 
       request.del = function (options) {
         this.request = { options: options };
-        return new process.EventEmitter();
+        return new events.EventEmitter();
       }.bind(this);
 
       request.verb = function (options) {
         this.request = { options: options };
-        return new process.EventEmitter();
+        return new events.EventEmitter();
       }.bind(this);
 
       this.trello = new Trello("APIKEY", "USERTOKEN");
