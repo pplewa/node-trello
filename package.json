@@ -7,7 +7,7 @@
     "api",
     "web-service"
   ],
-  "version": "1.2.1",
+  "version": "1.2.2",
   "author": "Luca Matteis <lmatteis@gmail.com>",
   "contributors": [
     {
@@ -16,15 +16,12 @@
     }
   ],
   "dependencies": {
-    "blanket": "^1.2.3",
-    "mocha": "^2.5.3",
     "oauth": "^0.9.15",
-    "request": "^2.81.0",
-    "should": "^5.2.0"
+    "request": "^2.81.0"
   },
   "devDependencies": {
     "blanket": "^1.1.6",
-    "mocha": "^2.1.0",
+    "mocha": "^3.4.2",
     "should": "^5.1.0",
     "travis-cov": "^0.2.5"
   },
