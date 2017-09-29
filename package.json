@@ -41,7 +41,7 @@
     "url": "http://github.com/adunkman/node-trello/issues"
   },
   "engines": {
-    "node": ">= 0.10"
+    "node": ">= 4"
   },
   "main": "./index",
   "scripts": {
